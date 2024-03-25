@@ -1,4 +1,6 @@
+
 import 'package:bookly/features/home/presentation/view/widgets/custom_app_bar.dart';
+import 'package:bookly/features/home/presentation/view/widgets/featured_books_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeBody extends StatelessWidget {
@@ -9,7 +11,12 @@ class HomeBody extends StatelessWidget {
     return const Column(
       children: [
         CustomAppBar(),
+        FeaturedBooksListView(),
       ],
     );
   }
 }
+
+
+
+
