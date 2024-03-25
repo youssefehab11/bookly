@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const BooklyApp());
 }
-//test gitHub
+//test 2
 class BooklyApp extends StatelessWidget {
   const BooklyApp({super.key});
 
