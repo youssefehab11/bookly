@@ -2,7 +2,6 @@ import 'package:bookly/constants.dart';
 import 'package:bookly/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 
-
 void main() {
   runApp(const BooklyApp());
 }
@@ -16,15 +15,12 @@ class BooklyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: primaryColor,
-      ),
+          scaffoldBackgroundColor: primaryColor,
+          textTheme: Theme.of(context).textTheme.apply(
+              fontFamily: 'Montserrat',
+              bodyColor: Colors.white,
+              displayColor: Colors.white)),
       home: const HomeView(),
     );
   }
 }
-
-
-
-
-
-
