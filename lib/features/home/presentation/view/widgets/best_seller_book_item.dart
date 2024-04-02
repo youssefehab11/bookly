@@ -1,5 +1,7 @@
 import 'package:bookly/core/routing/routes.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/default_book_image.dart';
+import 'package:bookly/core/widgets/default_book_name.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerBookItem extends StatelessWidget {
@@ -16,32 +18,28 @@ class BestSellerBookItem extends StatelessWidget {
         margin: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 2 / 3,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15.0),
-                  image: const DecorationImage(
-                    image: NetworkImage(
-                      'https://i.pinimg.com/564x/95/fd/47/95fd47188d3471e804e52a80b139e623.jpg',
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
+            // AspectRatio(
+            //   aspectRatio: 2 / 3,
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //       borderRadius: BorderRadius.circular(15.0),
+            //       image: const DecorationImage(
+            //         image: NetworkImage(
+            //           'https://i.pinimg.com/564x/95/fd/47/95fd47188d3471e804e52a80b139e623.jpg',
+            //         ),
+            //         fit: BoxFit.cover,
+            //       ),
+            //     ),
+            //   ),
+            // ),
+            const DefaultBookImage(),
             const SizedBox(width: 12.0,),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Harry Potter and the Goblet of Fire',
-                    style: TextStyles.textStyle20.copyWith(
-                      fontFamily: 'GT Sectra Fine',
-                    ),
-                  ),
+                  DefaultBookName(style: TextStyles.textStyle20,),
                   const SizedBox(
                     height: 3.0,
                   ),

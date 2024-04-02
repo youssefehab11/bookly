@@ -1,3 +1,5 @@
+import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/default_book_name.dart';
 import 'package:bookly/features/book_details/view/widgets/book_details_app_bar.dart';
 import 'package:bookly/features/book_details/view/widgets/book_image.dart';
 import 'package:flutter/material.dart';
@@ -9,13 +11,14 @@ class BookDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            BookDetailsAppBar(),
-            SizedBox(height: 16.0,),
-            BookImage(),
+            const BookDetailsAppBar(),
+            const SizedBox(height: 16.0,),
+            const BookImage(),
+            DefaultBookName(style: TextStyles.textStyle24,textAlign: TextAlign.center,)
           ],
         ),
       ),

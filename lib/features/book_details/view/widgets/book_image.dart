@@ -1,4 +1,4 @@
-import 'package:bookly/core/components/book_image_item.dart';
+import 'package:bookly/core/widgets/default_book_image.dart';
 import 'package:flutter/material.dart';
 
 class BookImage extends StatelessWidget {
@@ -10,7 +10,7 @@ class BookImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.sizeOf(context).width * 0.5,
-      child: const BookImageItem(),
+      child: const DefaultBookImage(),
       );
   }
 }

@@ -1,4 +1,4 @@
-import 'package:bookly/core/components/book_image_item.dart';
+import 'package:bookly/core/widgets/default_book_image.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedBooksSliverList extends StatelessWidget {
@@ -13,7 +13,7 @@ class FeaturedBooksSliverList extends StatelessWidget {
         height: MediaQuery.sizeOf(context).height / 4,
         child: ListView.builder(
           itemBuilder: (context, index) {
-            return const BookImageItem();
+            return const DefaultBookImage();
           },
           itemCount: 10,
           physics: const BouncingScrollPhysics(),
