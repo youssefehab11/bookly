@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class SlideRightTransition extends PageRouteBuilder{
+class SlideRightTransitionNavigation extends PageRouteBuilder{
   final Widget page;
   
-  SlideRightTransition({required this.page}) : super(
+  SlideRightTransitionNavigation({required this.page}) : super(
     pageBuilder: (context, animation, secondryAnimation) => page,
     transitionsBuilder: (context, animation, secondryAnimation, child){
       final CurvedAnimation curvedAnimation = CurvedAnimation(parent: animation, curve: Curves.ease); 
