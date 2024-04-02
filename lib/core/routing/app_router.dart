@@ -8,7 +8,7 @@ class AppRouter {
   static Route generateRoute(RouteSettings settings) {
     return switch (settings.name) {
       AppRoutes.kHome => MaterialPageRoute(builder: (context) => const HomeView(),),
-      AppRoutes.kBookDetails => SlideRightTransitionNavigation(page: const BookDetailsView()),
+      AppRoutes.kBookDetails => RightTransitionNavigation(page: const BookDetailsView()),
       _ => MaterialPageRoute(
           builder: (context) => Scaffold(
             body: Center(
