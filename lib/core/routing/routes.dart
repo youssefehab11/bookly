@@ -1,4 +1,4 @@
 class AppRoutes{
-  static const String kHome = '/home';
+  static const String kHome = '/';
   static const String kBookDetails = '/bookDetails';
 }

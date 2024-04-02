@@ -1,7 +1,7 @@
 import 'package:bookly/core/animation/navigation.dart';
 import 'package:bookly/core/routing/routes.dart';
-import 'package:bookly/features/home/presentation/views/book_details_view.dart';
-import 'package:bookly/features/home/presentation/views/home_view.dart';
+import 'package:bookly/features/book_details/view/book_details_view.dart';
+import 'package:bookly/features/home/presentation/view/home_view.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
