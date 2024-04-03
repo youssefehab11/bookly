@@ -1,7 +1,9 @@
 import 'package:bookly/core/routing/routes.dart';
 import 'package:bookly/core/utils/styles.dart';
+import 'package:bookly/core/widgets/book_price.dart';
+import 'package:bookly/core/widgets/book_reviews.dart';
 import 'package:bookly/core/widgets/default_book_image.dart';
-import 'package:bookly/core/widgets/default_book_name.dart';
+import 'package:bookly/core/widgets/author_and_book_names.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerBookItem extends StatelessWidget {
@@ -18,20 +20,6 @@ class BestSellerBookItem extends StatelessWidget {
         margin: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            // AspectRatio(
-            //   aspectRatio: 2 / 3,
-            //   child: Container(
-            //     decoration: BoxDecoration(
-            //       borderRadius: BorderRadius.circular(15.0),
-            //       image: const DecorationImage(
-            //         image: NetworkImage(
-            //           'https://i.pinimg.com/564x/95/fd/47/95fd47188d3471e804e52a80b139e623.jpg',
-            //         ),
-            //         fit: BoxFit.cover,
-            //       ),
-            //     ),
-            //   ),
-            // ),
             const DefaultBookImage(),
             const SizedBox(width: 12.0,),
             Expanded(
@@ -39,42 +27,15 @@ class BestSellerBookItem extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  DefaultBookName(style: TextStyles.textStyle20,),
-                  const SizedBox(
-                    height: 3.0,
-                  ),
-                  Text('J.K. Rowling', style: TextStyles.textStyle14),
+                  BookNameWithAuthor(style: TextStyles.textStyle20,),
                   const SizedBox(
                     height: 8.0,
                   ),
-                  Row(
+                  const Row(
                     children: [
-                      Text(
-                        '19.99\$',
-                        style: TextStyles.textStyle20.copyWith(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const Spacer(),
-                      const Icon(
-                        Icons.star_rounded,
-                        color: Color(0xFFFFDD4F),
-                        size: 18.0,
-                      ),
-                      const SizedBox(
-                        width: 3.0,
-                      ),
-                      Text(
-                        '4.8',
-                        style: TextStyles.textStyle16,
-                      ),
-                      const SizedBox(
-                        width: 3.0,
-                      ),
-                      Text(
-                        '(2390)',
-                        style: TextStyles.textStyle14,
-                      ),
+                      BookPrice(),
+                      Spacer(),
+                      BookReviews()
                     ],
                   )
                 ],
