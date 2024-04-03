@@ -3,10 +3,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BookNameWithAuthor extends StatelessWidget {
-  const BookNameWithAuthor(
-      {super.key, required this.style, this.crossAxisAlignment});
+  const BookNameWithAuthor({
+    super.key,
+    required this.style,
+    this.crossAxisAlignment,
+    this.textAlign,
+  });
   final TextStyle style;
   final CrossAxisAlignment? crossAxisAlignment;
+  final TextAlign? textAlign;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,6 +19,7 @@ class BookNameWithAuthor extends StatelessWidget {
       children: [
         Text(
           'Harry Potter and the Goblet of Fire',
+          textAlign: textAlign ?? TextAlign.start,
           style: style.copyWith(
             fontFamily: 'GT Sectra Fine',
           ),
@@ -25,6 +31,7 @@ class BookNameWithAuthor extends StatelessWidget {
           opacity: 0.7,
           child: Text(
             'J.K. Rowling',
+            textAlign: textAlign ?? TextAlign.start,
             style: TextStyles.textStyle14,
           ),
         ),
