@@ -1,4 +1,4 @@
-import 'package:bookly/features/book_details/view/widgets/book_details_body.dart';
+import 'package:bookly/features/book_details/presentation/view/widgets/book_details_body.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsView extends StatelessWidget {
@@ -9,3 +9,5 @@ class BookDetailsView extends StatelessWidget {
     return const BookDetailsBody();
   }
 }
+
+
