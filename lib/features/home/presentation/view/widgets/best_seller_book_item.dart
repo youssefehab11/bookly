@@ -21,22 +21,22 @@ class BestSellerBookItem extends StatelessWidget {
         child: Row(
           children: [
             const DefaultBookImage(),
-            const SizedBox(width: 12.0,),
+            const SizedBox(
+              width: 12.0,
+            ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  BookNameWithAuthor(style: TextStyles.textStyle20,),
+                  BookNameWithAuthor(
+                    style: TextStyles.textStyle20,
+                  ),
                   const SizedBox(
                     height: 8.0,
                   ),
                   const Row(
-                    children: [
-                      BookPrice(),
-                      Spacer(),
-                      BookReviews()
-                    ],
+                    children: [BookPrice(), Spacer(), BookReviews()],
                   )
                 ],
               ),

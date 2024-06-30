@@ -8,10 +8,8 @@ class BookPrice extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       '19.99 €',
-      style: TextStyles.textStyle20.copyWith(
-        fontWeight: FontWeight.bold,
-        color: textColor
-      ),
+      style: TextStyles.textStyle20
+          .copyWith(fontWeight: FontWeight.bold, color: textColor),
     );
   }
 }

@@ -30,10 +30,9 @@ class BookDetailsBody extends StatelessWidget {
                 height: 32.0,
               ),
               BookNameWithAuthor(
-                style: TextStyles.textStyle24,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                textAlign: TextAlign.center,
-              ),
+                  style: TextStyles.textStyle24,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  textAlign: TextAlign.center),
               const SizedBox(
                 height: 12.0,
               ),
@@ -45,9 +44,10 @@ class BookDetailsBody extends StatelessWidget {
                   title: 'You can also like',
                 ),
               ),
-              
               const SimilarBook(),
-              const SizedBox(height: 16.0,)
+              const SizedBox(
+                height: 16.0,
+              )
             ],
           ),
         ),
@@ -55,5 +55,3 @@ class BookDetailsBody extends StatelessWidget {
     );
   }
 }
-
-

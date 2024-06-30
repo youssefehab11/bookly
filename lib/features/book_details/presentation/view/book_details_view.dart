@@ -9,5 +9,3 @@ class BookDetailsView extends StatelessWidget {
     return const BookDetailsBody();
   }
 }
-
-

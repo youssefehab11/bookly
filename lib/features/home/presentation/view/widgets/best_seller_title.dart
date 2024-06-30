@@ -9,8 +9,9 @@ class BestSellerSliverText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SliverToBoxAdapter(
-      child: DefaultSubTitle(title: 'Best Seller',),
+      child: DefaultSubTitle(
+        title: 'Best Seller',
+      ),
     );
   }
 }
-

@@ -16,9 +16,9 @@ class BooklyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: primaryColor // Status bar color
-      ),
+          statusBarColor: Colors.transparent,
+          systemNavigationBarColor: primaryColor // Status bar color
+          ),
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,

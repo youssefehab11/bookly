@@ -1,6 +1,5 @@
 import 'package:bookly/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class BookReviews extends StatelessWidget {
   const BookReviews({super.key});

@@ -19,5 +19,3 @@ class HomeBody extends StatelessWidget {
     );
   }
 }
-
-

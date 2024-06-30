@@ -11,6 +11,6 @@ class BookImage extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.sizeOf(context).width * 0.5,
       child: const DefaultBookImage(),
-      );
+    );
   }
 }
