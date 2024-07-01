@@ -20,7 +20,7 @@ class BestSellerBookItem extends StatelessWidget {
         margin: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const DefaultBookImage(),
+            const DefaultBookImage('https://i.pinimg.com/564x/95/fd/47/95fd47188d3471e804e52a80b139e623.jpg'),
             const SizedBox(
               width: 12.0,
             ),

@@ -20,9 +20,9 @@ class FeaturedBooksSliverList extends StatelessWidget {
               height: MediaQuery.sizeOf(context).height / 4,
               child: ListView.builder(
                 itemBuilder: (context, index) {
-                  return const DefaultBookImage();
+                  return DefaultBookImage(state.books[index].volumeInfo.imageLinks.thumbnail);
                 },
-                itemCount: 10,
+                itemCount: state.books.length,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
               ),
