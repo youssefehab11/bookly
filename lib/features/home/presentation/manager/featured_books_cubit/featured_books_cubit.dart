@@ -8,7 +8,7 @@ part 'featured_books_states.dart';
 class FeaturedBooksCubit extends Cubit<FeaturedBooksStates> {
   FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksInitialState());
   final HomeRepo homeRepo;
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> getFeaturedBooks() async {
     var result = await homeRepo.fetchFeaturedBooks();
     result.fold((failure) {
       emit(FeaturedBooksErrorState(failure.errMessage));
