@@ -6,8 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SimilarBooksList extends StatelessWidget {
-  const SimilarBooksList({super.key, required this.imageUrl});
-  final String imageUrl;
+  const SimilarBooksList({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BookDetailsCubit, BookDetailsState>(
@@ -18,7 +17,7 @@ class SimilarBooksList extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return DefaultBookImage(
-                  imageUrl,
+                  state.books[index].volumeInfo.imageLinks.thumbnail,
                 );
               },
               itemCount: state.books.length,

@@ -29,7 +29,7 @@ class BookDetailsBody extends StatelessWidget {
               const SizedBox(
                 height: 16.0,
               ),
-              const BookImage(),
+              BookImage(imageUrl: book.volumeInfo.imageLinks.thumbnail),
               const SizedBox(
                 height: 32.0,
               ),
@@ -50,7 +50,7 @@ class BookDetailsBody extends StatelessWidget {
                 ),
               ),
               
-              SimilarBooksList(imageUrl: book.volumeInfo.imageLinks.thumbnail),
+              const SimilarBooksList(),
               const SizedBox(height: 16.0,)
             ],
           ),
