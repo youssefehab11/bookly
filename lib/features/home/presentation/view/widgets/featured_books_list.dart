@@ -1,3 +1,4 @@
+import 'package:bookly/core/routing/routes.dart';
 import 'package:bookly/core/widgets/custom_loading_indicator.dart';
 import 'package:bookly/core/widgets/default_book_image.dart';
 import 'package:bookly/core/widgets/error.dart';
@@ -21,8 +22,13 @@ class FeaturedBooksSliverList extends StatelessWidget {
               height: MediaQuery.sizeOf(context).height / 4,
               child: ListView.builder(
                 itemBuilder: (context, index) {
-                  return DefaultBookImage(
-                    state.books[index].volumeInfo.imageLinks.thumbnail,
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRoutes.kBookDetails, arguments: state.books[index]);
+                    },
+                    child: DefaultBookImage(
+                      state.books[index].volumeInfo.imageLinks.thumbnail,
+                    ),
                   );
                 },
                 itemCount: state.books.length,
