@@ -17,7 +17,7 @@ class NewestBookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pushNamed(context, AppRoutes.kBookDetails),
+      onTap: () => Navigator.pushNamed(context, AppRoutes.kBookDetails, arguments: book),
       child: Container(
         height: 160,
         margin: const EdgeInsets.all(8.0),

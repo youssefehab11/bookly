@@ -6,12 +6,16 @@ import 'package:bookly/features/book_details/presentation/view/widgets/book_acti
 import 'package:bookly/features/book_details/presentation/view/widgets/book_details_app_bar.dart';
 import 'package:bookly/features/book_details/presentation/view/widgets/book_image.dart';
 import 'package:bookly/features/book_details/presentation/view/widgets/similar_books_list.dart';
+import 'package:bookly/features/home/data/model/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsBody extends StatelessWidget {
   const BookDetailsBody({
     super.key,
+    required this.book
   });
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +36,7 @@ class BookDetailsBody extends StatelessWidget {
               BookNameWithAuthor(
                 style: TextStyles.textStyle24,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                textAlign: TextAlign.center, bookName: '', authorName: '',
+                textAlign: TextAlign.center, bookName: book.volumeInfo.title!, authorName: book.volumeInfo.authors![0],
               ),
               const SizedBox(
                 height: 12.0,
@@ -46,7 +50,7 @@ class BookDetailsBody extends StatelessWidget {
                 ),
               ),
               
-              const SimilarBook(),
+              SimilarBooksList(imageUrl: book.volumeInfo.imageLinks.thumbnail),
               const SizedBox(height: 16.0,)
             ],
           ),
