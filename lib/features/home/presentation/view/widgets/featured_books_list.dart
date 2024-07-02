@@ -3,6 +3,7 @@ import 'package:bookly/core/widgets/default_book_image.dart';
 import 'package:bookly/core/widgets/error.dart';
 import 'package:bookly/features/home/presentation/manager/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class FeaturedBooksSliverList extends StatelessWidget {
@@ -20,18 +21,18 @@ class FeaturedBooksSliverList extends StatelessWidget {
               height: MediaQuery.sizeOf(context).height / 4,
               child: ListView.builder(
                 itemBuilder: (context, index) {
-                  return DefaultBookImage(state.books[index].volumeInfo.imageLinks.thumbnail);
+                  return DefaultBookImage(
+                    state.books[index].volumeInfo.imageLinks.thumbnail,
+                  );
                 },
                 itemCount: state.books.length,
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
               ),
             );
-          }
-          else if (state is FeaturedBooksErrorState){
+          } else if (state is FeaturedBooksErrorState) {
             return ErrorText(state.errMessage);
-          }
-          else{
+          } else {
             return const CustomLoadingIndicator();
           }
         },
