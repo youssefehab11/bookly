@@ -4,12 +4,15 @@ import 'package:bookly/core/widgets/book_price.dart';
 import 'package:bookly/core/widgets/book_reviews.dart';
 import 'package:bookly/core/widgets/default_book_image.dart';
 import 'package:bookly/core/widgets/author_and_book_names.dart';
+import 'package:bookly/features/home/data/model/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerBookItem extends StatelessWidget {
-  const BestSellerBookItem({
+class NewestBookItem extends StatelessWidget {
+  const NewestBookItem({
+    required this.book,
     super.key,
   });
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,9 @@ class BestSellerBookItem extends StatelessWidget {
         margin: const EdgeInsets.all(8.0),
         child: Row(
           children: [
-            const DefaultBookImage('https://i.pinimg.com/564x/95/fd/47/95fd47188d3471e804e52a80b139e623.jpg'),
+            DefaultBookImage(
+              book.volumeInfo.imageLinks.thumbnail,
+            ),
             const SizedBox(
               width: 12.0,
             ),
@@ -31,12 +36,18 @@ class BestSellerBookItem extends StatelessWidget {
                 children: [
                   BookNameWithAuthor(
                     style: TextStyles.textStyle20,
+                    bookName: book.volumeInfo.title!,
+                    authorName: book.volumeInfo.authors![0],
                   ),
                   const SizedBox(
                     height: 8.0,
                   ),
                   const Row(
-                    children: [BookPrice(), Spacer(), BookReviews()],
+                    children: [
+                      BookPrice(),
+                      Spacer(),
+                      BookReviews(),
+                    ],
                   )
                 ],
               ),

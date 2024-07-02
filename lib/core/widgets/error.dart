@@ -7,9 +7,12 @@ class ErrorText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      errMessage,
-      style: TextStyles.textStyle16,
+    return Center(
+      child: Text(
+        errMessage,
+        style: TextStyles.textStyle16,
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }

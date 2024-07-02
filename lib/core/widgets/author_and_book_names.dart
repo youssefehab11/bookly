@@ -8,17 +8,21 @@ class BookNameWithAuthor extends StatelessWidget {
     required this.style,
     this.crossAxisAlignment,
     this.textAlign,
+    required this.bookName,
+    required this.authorName
   });
   final TextStyle style;
   final CrossAxisAlignment? crossAxisAlignment;
   final TextAlign? textAlign;
+  final String bookName;
+  final String authorName;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: crossAxisAlignment ?? CrossAxisAlignment.start,
       children: [
         Text(
-          'Harry Potter and the Goblet of Fire',
+          bookName,
           textAlign: textAlign ?? TextAlign.start,
           style: style.copyWith(
             fontFamily: 'GT Sectra Fine',
@@ -30,7 +34,7 @@ class BookNameWithAuthor extends StatelessWidget {
         Opacity(
           opacity: 0.7,
           child: Text(
-            'J.K. Rowling',
+            authorName,
             textAlign: textAlign ?? TextAlign.start,
             style: TextStyles.textStyle14,
           ),

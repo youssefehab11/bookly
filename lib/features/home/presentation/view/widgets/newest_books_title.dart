@@ -1,8 +1,8 @@
 import 'package:bookly/core/widgets/default_sub_title.dart';
 import 'package:flutter/material.dart';
 
-class BestSellerSliverText extends StatelessWidget {
-  const BestSellerSliverText({
+class NewestBooksSliverText extends StatelessWidget {
+  const NewestBooksSliverText({
     super.key,
   });
 
@@ -10,7 +10,7 @@ class BestSellerSliverText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SliverToBoxAdapter(
       child: DefaultSubTitle(
-        title: 'Best Seller',
+        title: 'Newest Books',
       ),
     );
   }

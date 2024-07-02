@@ -32,7 +32,7 @@ class BookDetailsBody extends StatelessWidget {
               BookNameWithAuthor(
                 style: TextStyles.textStyle24,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                textAlign: TextAlign.center
+                textAlign: TextAlign.center, bookName: '', authorName: '',
               ),
               const SizedBox(
                 height: 12.0,
